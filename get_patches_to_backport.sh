@@ -20,6 +20,8 @@ usage()
 		--kernel-versions
 		--fixes-only
 		--help
+		--rhel7_repo_path
+		--rhel_8_repo_path
 EOF
 }
 
@@ -36,6 +38,14 @@ do
 			;;
 		--kernel-versions)
 			kvers=$2
+			shift
+			;;
+		--rhel7_repo_path)
+			RHEL_7_TREE=$2
+			shift
+			;;
+		--rhel_8_repo_path)
+			RHEL_8_TREE=$2
 			shift
 			;;
 		--fixes-only)
